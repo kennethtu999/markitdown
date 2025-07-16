@@ -1,2 +1,6 @@
 *
 !packages/
+!webserver.py
+!HTTP_API_USAGE.md
+!example_usage.py
+!requirements.txt

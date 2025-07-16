@@ -1,0 +1,7 @@
+# Web server dependencies
+flask>=2.0.0
+markitdown[all]
+pillow>=8.0.0
+
+# Additional dependencies for better performance
+gunicorn>=20.0.0 

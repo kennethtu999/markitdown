@@ -176,11 +176,11 @@ result = md.convert("example.jpg")
 print(result.text_content)
 ```
 
-### Docker
+### Podman
 
 ```sh
-docker build -t markitdown:latest .
-docker run --rm -i markitdown:latest < ~/your-file.pdf > output.md
+podman build -t markitdown:latest .
+podman run --rm -i markitdown:latest < ~/your-file.pdf > output.md
 ```
 
 ## Contributing
@@ -246,3 +246,13 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+
+## Example Usage
+
+``` sh
+curl -X POST http://localhost:8000/convert \
+  -F "file=@./sdist/111.docx" \
+  -F "keep_data_uris=true" \
+  -F "max_size_kb=300" \
+  -o response.md
+```
